@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Driven Text Extraction Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Driven Text Extraction Tool</h1>
+            <p>Extract text from your images and PDFs using advanced AI-driven tools. Supports plain text, JSON, and CSV formats.</p>
+            <nav>
+                <ul>
+                    <li><a href="#upload-section">Upload</a></li>
+                    <li><a href="#search-section">Search</a></li>
+                    <li><a href="#features-section">Features</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="upload-section">
+            <div class="container">
+                <h2>Upload Your File</h2>
+                <form id="upload-form">
+                    <input type="file" name="file" id="file-input" accept="image/*,application/pdf" required>
+                    <label for="format-select">Output Format:</label>
+                    <select id="format-select" name="format">
+                        <option value="text">Plain Text</option>
+                        <option value="json">JSON</option>
+                        <option value="csv">CSV</option>
+                    </select>
+                    <button type="submit">Upload and Extract</button>
+                </form>
+                <div id="result"></div>
+            </div>
+        </section>
+        <section id="search-section">
+            <div class="container">
+                <h2>Search Extracted Text</h2>
+                <form id="search-form">
+                    <label for="search-input">Enter Keyword:</label>
+                    <input type="text" id="search-input" placeholder="Keyword" required>
+                    <button type="submit">Search</button>
+                </form>
+                <div id="search-results"></div>
+            </div>
+        </section>
+        <section id="features-section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature">
+                    <h3>Text Extraction</h3>
+                    <p>Extracts text from various image formats and PDFs.</p>
+                </div>
+                <div class="feature">
+                    <h3>Output Formats</h3>
+                    <p>Supports Plain Text, JSON, and CSV formats for extracted text.</p>
+                </div>
+                <div class="feature">
+                    <h3>Keyword Search</h3>
+                    <p>Quickly search through the extracted text to find specific keywords.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p><a href="#upload-section">Back to Top</a></p>
+        </div>
+    </footer>
+</body>
+</html>
